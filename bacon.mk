@@ -97,10 +97,6 @@ PRODUCT_PROPERTY_OVERRIDES +=
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
-# BoringSSL compatibility with OpenSSL blobs
-PRODUCT_PACKAGES += \
-    libboringssl-compat
-
 # Camera
 PRODUCT_PACKAGES += \
     camera.bacon \
@@ -133,7 +129,8 @@ PRODUCT_PACKAGES += \
     gralloc.msm8974 \
     hwcomposer.msm8974 \
     memtrack.msm8974 \
-    liboverlay
+    liboverlay \
+    libboringssl-compat
 
 # GPS
 PRODUCT_PACKAGES += \
