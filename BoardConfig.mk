@@ -163,6 +163,9 @@ TARGET_POWERHAL_VARIANT := qcom
 # Protobuf-c
 PROTOBUF_SUPPORTED := true
 
+# Power
+TARGET_POWERHAL_VARIANT := none
+
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
