@@ -163,6 +163,9 @@ TARGET_RIL_VARIANT := caf
 # Recovery
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.bacon
 
+#Dummy Recovery
+TARGET_DUMMY_RECOVERY_PATCH := true
+
 # RPC
 TARGET_NO_RPC := true
 
