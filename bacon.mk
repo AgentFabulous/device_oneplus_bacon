@@ -267,10 +267,6 @@ PRODUCT_PACKAGES += \
     libdsutils \
     libwpa_qmi_eap_proxy
 
-# Recovery
-PRODUCT_EXTRA_RECOVERY_KEYS += \
-    $(LOCAL_PATH)/bacon
-
 # STK
 PRODUCT_PACKAGES += \
     Stk
