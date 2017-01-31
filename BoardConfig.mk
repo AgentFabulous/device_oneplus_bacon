@@ -175,9 +175,6 @@ TARGET_RIL_VARIANT := caf
 # Recovery
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.bacon
 
-#Enable Legacy blobs
-TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
-
 #Dummy Recovery
 TARGET_DUMMY_RECOVERY_PATCH := true
 
