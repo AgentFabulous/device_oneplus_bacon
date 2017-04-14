@@ -24,6 +24,13 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
 
+# AOSP Packages
+PRODUCT_PACKAGES += \
+    Browser \
+    Launcher3 \
+    messaging \
+    Terminal
+
 # Config scripts
 PRODUCT_PACKAGES += \
     init.qcom.bt.sh
