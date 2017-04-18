@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012-2014, The CyanogenMod Project
+ * Copyright (C) 2016, The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -73,7 +73,7 @@ camera_module_t HAL_MODULE_INFO_SYM = {
     .open_legacy = NULL, /* remove compilation warnings */
     .set_torch_mode = NULL,
     .init = NULL,
-    .reserved = {0,0,0,0,0}, /* remove compilation warnings */
+    .reserved = {0}, /* remove compilation warnings */
 };
 
 typedef struct wrapper_camera_device {
@@ -431,7 +431,7 @@ static char *camera_get_parameters(struct camera_device *device)
     return strdup(params.flatten().string());
 }
 
-static void camera_put_parameters(struct camera_device *device __unused, char *params)
+static void camera_put_parameters(struct camera_device *device, char *params)
 {
     ALOGV("%s->%08X->%08X", __FUNCTION__, (uintptr_t)device,
             (uintptr_t)(((wrapper_camera_device_t*)device)->vendor));
