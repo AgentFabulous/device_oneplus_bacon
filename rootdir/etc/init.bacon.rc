@@ -32,10 +32,18 @@ on init
 
     write /proc/sys/vm/page-cluster 0
 
+on post-fs-data
+    rm /data/logcat.txt
+
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
     write /sys/kernel/boot_adsp/boot 1
+
+service logcat_debug /system/bin/logcat -b all -f /data/logcat.txt -v threadtime
+    class main
+    user root
+    group system
 
 on fs
     mount_all ./fstab.bacon
