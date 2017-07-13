@@ -345,6 +345,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Call the proprietary setup
 $(call inherit-product, vendor/oneplus/bacon/bacon-vendor.mk)
 
+ifneq ($(QCPATH),)
+$(call inherit-product-if-exists, $(QCPATH)/prebuilt_HY11/target/product/msm8974/prebuilt.mk)
+endif
+
 # Doze
 PRODUCT_PACKAGES += \
     OnePlusDoze
