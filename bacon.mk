@@ -102,7 +102,8 @@ PRODUCT_PACKAGES += \
     camera.msm8974 \
     libmmcamera_interface \
     libmmjpeg_interface \
-    libqomx_core
+    libqomx_core \
+    Snap-bacon
 
 # Charger
 PRODUCT_PACKAGES += \
