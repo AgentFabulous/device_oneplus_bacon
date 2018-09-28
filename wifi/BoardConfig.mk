@@ -1,1 +1,1 @@
-DEVICE_MANIFEST_FILE += $(DEV_DIR)/wifi/manifest.xml
+DEVICE_MANIFEST_FILE += $(PLATFORM_PATH)/wifi/manifest.xml

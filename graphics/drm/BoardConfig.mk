@@ -1,4 +1,4 @@
 BOARD_SEPOLICY_DIRS += \
-	$(DEV_DIR)/graphics/drm/sepolicy
+	$(PLATFORM_PATH)/graphics/drm/sepolicy
 
-DEVICE_MANIFEST_FILE += $(DEV_DIR)/graphics/drm/manifest.xml
+DEVICE_MANIFEST_FILE += $(PLATFORM_PATH)/graphics/drm/manifest.xml
