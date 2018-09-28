@@ -1,4 +1,0 @@
-subdirs = [
-    "camera-service/provider",
-    "bluetooth/impl",
-]

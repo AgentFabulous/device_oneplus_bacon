@@ -1,0 +1,37 @@
+menu "Graphics support"
+
+config SW_GRAPHICS
+	bool "Force Software rendering"
+
+if !SW_GRAPHICS
+
+choice
+	prompt "HWComposer support"
+	default BOARD_USES_DRM_HWCOMPOSER
+
+config BOARD_USES_DRM_HWCOMPOSER
+	bool "DRM HWComposer"
+
+config GRALLOC_MALI
+	bool "Gralloc support for Mali"
+
+endchoice
+
+config TARGET_USES_HWC2
+	def_bool y
+	depends on BOARD_USES_DRM_HWCOMPOSER
+
+config BOARD_GPU_DRIVERS
+	string "Mesa GPU drivers"
+	depends on BOARD_USES_DRM_HWCOMPOSER
+	default "freedreno virgl"
+
+endif
+config DISPLAY_DPI
+	int "Display DPI setting override"
+	default 0
+	help
+	  Sets the DPI value. If left as zero, the DPI will
+	  be probed via EDID from the monitor or use values
+	  from DT.
+endmenu
